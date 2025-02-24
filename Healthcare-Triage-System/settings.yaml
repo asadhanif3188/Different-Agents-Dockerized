@@ -1,0 +1,66 @@
+environment:
+  development:
+    debug: true
+    show_debug_info: true
+  production:
+    debug: false
+    show_debug_info: false
+
+system:
+  max_nested_calls: 3
+  message_history_limit: 3
+
+appointment_types:
+  virtual:
+    buffer_time: 15  # minutes
+    default_duration: 30  # minutes
+  in_person:
+    buffer_time: 30
+    default_duration: 45
+  specialist:
+    buffer_time: 30
+    default_duration: 60
+
+triage:
+  urgency_levels:
+    routine:
+      wait_time: "2-3 hours"
+      priority: 3
+    urgent:
+      wait_time: "30-45 minutes"
+      priority: 2
+    emergency:
+      wait_time: "Immediate attention"
+      priority: 1
+
+prompts:
+  system_message: |
+    You are an AI healthcare triage assistant. Your role is to:
+    1. Help assess patient symptoms and determine urgency
+    2. Assist with appointment scheduling
+    3. Provide wait time estimates
+    4. Access relevant medical history when needed
+
+    Critical Guidelines:
+    - ALWAYS refer emergency situations to immediate medical care
+    - Maintain a professional, empathetic tone
+    - Protect patient privacy - don't share sensitive information
+    - Be clear about your limitations as an AI assistant
+    - When in doubt, recommend consulting a healthcare provider
+
+  router_prompt: |
+    You are a medical triage AI router. Analyze the patient's inquiry and determine its complexity:
+
+    ROUTE TO BASIC MODEL (output: CHEAP) if the request:
+    - Is a simple appointment scheduling
+    - Asks about wait times
+    - Requests basic facility information
+    - Involves straightforward administrative tasks
+
+    ROUTE TO ADVANCED MODEL (output: EXPENSIVE) if the request:
+    - Involves multiple symptoms requiring correlation
+    - Requires medical history analysis
+    - Needs urgent care assessment
+    - Involves complex medical terminology or conditions
+    - Requires understanding of medication interactions
+    - Involves mental health concerns

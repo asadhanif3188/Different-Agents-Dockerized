@@ -1,0 +1,19 @@
+{
+    "api": {
+        "groq": {
+            "default_key": "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",
+            "default_model": "mixtral-8x7b-32768"
+        },
+        "ollama": {
+            "default_model": "llama3.2:3b"
+        }
+    },
+    "timezone": "America/New_York",
+    "mock_data": {
+        "available_slots": {
+            "virtual": ["09:00", "10:00", "14:00", "15:00"],
+            "in-person": ["11:00", "13:00", "16:00"],
+            "specialist": ["10:30", "14:30"]
+        }
+    }
+}

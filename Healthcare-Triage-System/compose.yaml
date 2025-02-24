@@ -1,0 +1,11 @@
+services:
+  healthcare-triage-agent:
+    build:
+      context: .
+    image: healthcare-triage-agent:v2
+    container_name: healthcare-triage-agent
+    ports:
+      - "8503:8501"
+    env_file:
+      - .env
+      
