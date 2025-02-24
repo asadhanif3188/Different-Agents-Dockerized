@@ -1,0 +1,11 @@
+services:
+  cyber-agent:
+    build:
+      context: .
+    image: cyber-agent:v2
+    container_name: cyber-agent
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+      

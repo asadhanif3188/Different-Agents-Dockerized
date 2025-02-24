@@ -1,0 +1,3 @@
+include:
+  - Advanced-Stock-Analysis-Agent/compose.yaml 
+  - Cybersecurity-AI-Agents/compose.yaml

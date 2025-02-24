@@ -1,0 +1,9 @@
+.env
+.env.example
+.gitignore
+.cache
+.git
+__pycache__
+agtenv
+README.md
+compose.yaml
