@@ -1,0 +1,10 @@
+services:
+  invoice-processing-agent:
+    build:
+      context: .
+    image: invoice-processing:v2
+    container_name: invoice-processing-agent
+    ports:
+      - "8504:8501"
+
+      

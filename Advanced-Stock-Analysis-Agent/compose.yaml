@@ -2,7 +2,7 @@ services:
   stock-analysis-agent:
     build:
       context: .
-    image: stock-analysis:v1
+    image: stock-analysis:v2
     container_name: stock-analysis-agent
     ports:
       - "8502:8501"
