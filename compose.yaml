@@ -3,3 +3,4 @@ include:
   - Cybersecurity-AI-Agents/compose.yaml
   - Healthcare-Triage-System/compose.yaml
   - Invoice-Processing-Agents/compose.yaml
+  - Complex-Decision-Agent/compose.yaml 
