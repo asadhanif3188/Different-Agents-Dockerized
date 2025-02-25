@@ -1,0 +1,10 @@
+services:
+  complex-decision-agent:
+    build:
+      context: .
+    image: complex-decision:v2
+    container_name: complex-decision-agent
+    ports:
+      - "8505:8501"
+
+      
