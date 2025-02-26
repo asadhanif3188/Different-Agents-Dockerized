@@ -7,13 +7,16 @@ services:
     ports:
       - "8506:8501"
     env_file:
-      - ./frontend/.env
+      - .env
     depends_on:
       - supply-chain-agent-backend
   supply-chain-agent-backend:
     build:
-      context: backend
+      context: .
+      dockerfile: ./Dockerfile-frontend
     image: supply-chain-agent-backend:v2
     container_name: supply-chain-agent-backend
     ports:
       - "8000:8000"
+    env_file:
+      - .env
