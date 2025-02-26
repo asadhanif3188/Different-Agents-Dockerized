@@ -1,7 +1,8 @@
 services:
   supply-chain-agent-frontend:
     build:
-      context: frontend
+      context: .
+      dockerfile: ./Dockerfile-frontend
     image: supply-chain-agent-frontend:v2
     container_name: supply-chain-agent-frontend
     ports:
