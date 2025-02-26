@@ -1,0 +1,15 @@
+streamlit
+plotly
+groq
+scikit-learn
+langchain
+langchain-community
+langchain-core
+langchain-groq
+python-dotenv
+langgraph
+fastapi
+uvicorn
+streamlit
+requests
+loguru
