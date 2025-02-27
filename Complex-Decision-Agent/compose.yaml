@@ -4,7 +4,8 @@ services:
     container_name: complex-decision-ollama-llm
     ports:
       - "11434:11434"
-
+    command: >
+      sh -c "ollama pull llama3.1 && ollama serve"
 
   complex-decision-agent:
     build:
