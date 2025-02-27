@@ -3,10 +3,7 @@ from langchain_ollama import OllamaLLM
 from langchain_core.messages import AIMessage, HumanMessage, BaseMessage
 from typing import List, Sequence
 from utils import load_prompts, log_response, load_config
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
 
 config = load_config()
 prompts = load_prompts()
@@ -14,7 +11,7 @@ prompts = load_prompts()
 # llm = OllamaLLM(model=config["model_name"])
 llm = OllamaLLM(
     model = config["model_name"],
-    base_url = os.environ.get('OllamaLLM_BASE_URL')
+    base_url = os.getenv('OllamaLLM_BASE_URL')
 )
 
 # Properly creating the generation and reflection prompt templates
